@@ -312,12 +312,13 @@
 
 html {
   box-sizing: border-box;
-  height: 100vh;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   background: #F7EDD9;
 }
@@ -346,7 +347,7 @@ a:hover:visited, a:visited:visited, a:link:visited, a:active:visited {
 }
 
 .col-xs-12 {
-  width: 100vw;
+  width: 100%;
 }
 
 #navMenu {
@@ -438,7 +439,8 @@ a:hover:visited, a:visited:visited, a:link:visited, a:active:visited {
 .wrapper {
   background-color: #FAB347;
   width: 300%;
-  height: 100vh;
+  height: 100%;
+  overflow: hidden;
 }
 
 .wrapper section.main {
@@ -594,7 +596,7 @@ a:hover:visited, a:visited:visited, a:link:visited, a:active:visited {
 
 @media screen and (max-width: 557px) {
   .wrapper section.main .content {
-    padding-left: 10px;
+    padding-left: 20px;
     padding-top: 70px;
   }
   .wrapper section.main .content h1 {
@@ -643,7 +645,7 @@ a:hover:visited, a:visited:visited, a:link:visited, a:active:visited {
 .control {
   position: absolute;
   bottom: 20px;
-  right: -1px;
+  right: 0px;
   width: 165px;
   height: 50px;
   cursor: pointer;
@@ -734,13 +736,8 @@ a:hover:visited, a:visited:visited, a:link:visited, a:active:visited {
   right: 0px;
 }
 
-@media screen and (max-width: 477px) {
-  .control {
-    right: -20px;
-  }
-  .control hr {
-    width: 20px;
-  }
+.control.prev hr {
+  width: 20px;
 }
 
 #navMenu ul li a, .wrapper section.main .content .cart-box ul li, .wrapper section.main .content .btn-def, .control, .control .quarter-circle, .control p, .control.prev .quarter-circle, .control.prev span {

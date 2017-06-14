@@ -1,6 +1,6 @@
-@import "mixins"
+
 // @import "./bootstrap-sass/assets/stylesheets/bootstrap.scss"
-@import "index"
+
 @import "animation"
 
 $darkColor: #010712
@@ -12,11 +12,12 @@ $purple: #513A50
 
 html
   box-sizing: border-box
-  height: 100vh
+  height: 100%
+  overflow: hidden
 body
     font:
             family: 'Montserrat', sans-serif
-    height: 100vh
+    height: 100%
     overflow: hidden
     background: $lightColor
 
@@ -36,7 +37,7 @@ a:hover, a:visited, a:link, a:active
 
 
 .col-xs-12
-    width: 100vw
+    width: 100%
 #navMenu
     background-color: transparent
     border: none
@@ -100,8 +101,8 @@ a:hover, a:visited, a:link, a:active
 .wrapper
     background-color: $yellow
     width: 300%
-    height: 100vh
-
+    height: 100%
+    overflow: hidden
     section.main
         padding-top: 50px
         width: calc(100% / 3)
@@ -211,7 +212,7 @@ a:hover, a:visited, a:link, a:active
                     p
                         width: 60%
             @media screen and (max-width: 557px)
-                padding-left: 10px
+                padding-left: 20px
                 padding-top: 70px
                 h1
                     font-size: 2em
@@ -249,7 +250,7 @@ a:hover, a:visited, a:link, a:active
 .control
     position: absolute
     bottom: 20px
-    right: -1px
+    right: 0px
     width: 165px
     height: 50px
     cursor: pointer
@@ -322,8 +323,7 @@ a:hover, a:visited, a:link, a:active
             position: relative
             right: 0px
             @extend %transition
-    @media screen and (max-width: 477px)
-        right: -20px
+
         hr
             width: 20px
 %transition
