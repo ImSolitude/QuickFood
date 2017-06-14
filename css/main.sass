@@ -1,0 +1,330 @@
+@import "mixins"
+// @import "./bootstrap-sass/assets/stylesheets/bootstrap.scss"
+@import "index"
+@import "animation"
+
+$darkColor: #010712
+$lightColor: #F7EDD9
+$pink: #ED7170
+$yellow: #FAB347
+$purple: #513A50
+
+
+html
+  box-sizing: border-box
+  height: 100vh
+body
+    font:
+            family: 'Montserrat', sans-serif
+    height: 100vh
+    overflow: hidden
+    background: $lightColor
+
+*, *:before, *:after
+    box-sizing: inherit
+.container .row *, .container .row *:before, .container .row *:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+a:hover, a:visited, a:link, a:active
+    text-decoration: none
+    color: inherit
+    &:hover
+        text-decoration: none
+    &:visited
+        text-decoration: none
+
+
+.col-xs-12
+    width: 100vw
+#navMenu
+    background-color: transparent
+    border: none
+    ul
+        margin: 0
+        li
+            a
+                font-size: 12px
+                color: $lightColor
+                letter-spacing: 1px
+                @extend %transition
+            &:hover
+                a
+                    border-bottom: 1px solid $lightColor
+    .container-fluid
+        padding-top: 10px
+        padding-left: 130px
+        padding-right: 0px
+        @media screen and (max-width: 768px)
+            padding-left: 15px
+            padding-right: 15px
+        .navbar-brand
+            color: $lightColor
+            span
+                font-weight: 500
+        .cart-count
+            background: $yellow
+            color: $purple
+            border-radius: 999px
+            display: inline-block
+            height: 20px
+            width: 20px
+            text-align: center
+        .menu-toggle
+            padding: 12px 20px 12px 20px
+            .icon-bar
+                display: block
+                width: 22px
+                height: 2px
+                background: $lightColor
+                margin: 5px 0px
+        .navbar-toggle
+            border: none
+            padding: 0
+            margin: 0
+            background: none
+            &:hover
+                background: none
+        .mobile-nav
+            li
+                display: inline-block
+                vertical-align: middle
+                a
+                    background: none
+                    &:hover
+                        background: none
+
+
+
+
+.wrapper
+    background-color: $yellow
+    width: 300%
+    height: 100vh
+
+    section.main
+        padding-top: 50px
+        width: calc(100% / 3)
+        height: 100%
+        float: left
+        display: none
+        &.active
+            display: flex
+            @extend .animation-target
+        .container-fluid
+            height: 100%
+            margin: 0
+            padding: 0
+        .row
+            height: 100%
+
+        .img-wrapper
+            height: 100%
+            position: relative
+            overflow: hidden
+            @media screen and (max-width: 557px)
+                top: -30px
+            &::before
+                content: ''
+                position: absolute
+                top: 38%
+                left: 0%
+                width: 100%
+                height: 25%
+                background: $lightColor
+            img
+                width: 250px
+                max-width: 70%
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+        .content
+            height: 100%
+            padding: 100px 0px 0px 100px
+            h1
+                width: 100%
+                color: $lightColor
+                font-size: 70px
+            .price-box
+                h3
+                    font-size: 30px
+                    font-weight: 700
+                    margin-bottom: 30px
+                    span
+                        font-weight: 500
+                        font-size: 12px
+                        color: $lightColor
+                        padding-left: 5px
+                p
+                    font-size: 12px
+                    color: $lightColor
+                    opacity: 0.8
+                    width: 50%
+            .cart-box
+                margin-top: 30px
+                .btn-def
+                    vertical-align: sub
+                ul
+                    display: inline-flex
+                    padding: 0px 0px 0px 0px
+                    margin-right: 20px
+                    li
+                        font-size: 10px
+                        display: inline-block
+                        padding: 8px
+                        text-align: center
+                        margin: 0
+                        height: 30px
+                        width: 30px
+                        color: $lightColor
+                        background-color: rgba(255, 255, 255, 0.1)
+
+                        @extend %transition
+                        &:hover
+                            background-color: rgba(255, 255, 255, 0.5)
+                        &:last-child
+                            cursor: pointer
+                            border-top-right-radius: 50%
+                            border-bottom-right-radius: 50%
+                        &:first-child
+                            cursor: pointer
+                            border-top-left-radius: 50%
+                            border-bottom-left-radius: 50%
+
+            .btn-def
+                height: 30px
+                padding: 8px 30px
+                border: 2px solid $lightColor
+                color: $lightColor
+                border-radius: 20px
+                cursor: pointer
+                @extend %transition
+                &:hover
+                    background-color: rgba(255, 255, 255, 0.2)
+
+            @media screen and (max-width: 768px)
+                padding-left: 20px
+                h1
+                    font-size: 4em
+                .price-box
+                    p
+                        width: 60%
+            @media screen and (max-width: 557px)
+                padding-left: 10px
+                padding-top: 70px
+                h1
+                    font-size: 2em
+                .price-box
+                    h3
+                        margin-bottom: 10px
+                        margin-top: 10px
+                    p
+                        width: 50%
+                .cart-box
+                    margin-top: 10px
+                    ul
+                        display: flex
+                        padding-bottom: 10px
+
+
+    .first
+        background: $pink
+        .price-box
+            h3
+                color: $yellow
+    .second
+        background: $yellow
+        .price-box
+            h3
+                color: $pink
+    .third
+        background: $purple
+        .price-box
+            h3
+                color: $yellow
+
+
+
+.control
+    position: absolute
+    bottom: 20px
+    right: -1px
+    width: 165px
+    height: 50px
+    cursor: pointer
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    @extend %transition
+
+    &:hover
+        .quarter-circle
+            opacity: 1
+        p
+            left: 5px
+    .quarter-circle
+        opacity: 0.5
+        width: 70px
+        height: 70px
+        display: inline-block
+        border-top-left-radius: 100px
+        background: $yellow
+        border-top: 5px solid rgba(237, 113, 112, 0.498039)
+        border-left: 5px solid rgba(237, 113, 112, 0.498039)
+        vertical-align: middle
+        @extend %transition
+    img
+        width: 50px
+        position: relative
+        top: 10px
+        left: 15px
+    hr
+        display: inline-block
+        vertical-align: middle
+        color: $lightColor
+        margin-left: 10px
+        margin-right: 10px
+    p
+        display: inline-block
+        color: $lightColor
+        font-weight: 500
+        letter-spacing: 1px
+        font-size: 12px
+        position: relative
+        left: 0px
+        @extend %transition
+    &.prev
+        left: 0
+        bottom: 20px
+        .quarter-circle
+            background: $purple
+            border-top-right-radius: 100px
+            border-top-left-radius: 0px
+            border-top: 5px solid rgba(237, 113, 112, 0.498039)
+            border-right: 5px solid rgba(237, 113, 112, 0.498039)
+            border-left: none
+            @extend %transition
+        &:hover
+            span
+                right: 5px
+        img
+            left: 0px
+        hr
+            margin-left: 0px
+        span
+            color: $lightColor
+            letter-spacing: 1px
+            font-size: 12px
+            font-weight: 500
+            position: relative
+            right: 0px
+            @extend %transition
+    @media screen and (max-width: 477px)
+        right: -20px
+        hr
+            width: 20px
+%transition
+    transition: all 0.33s ease
