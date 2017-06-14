@@ -68,11 +68,19 @@ a:hover, a:visited, a:link, a:active
             color: $purple
             border-radius: 999px
             display: inline-block
-            height: 20px
-            width: 20px
+            height: 25px
+            width: 25px
             text-align: center
+            font-size: 10px
+            vertical-align: middle
+            padding-top: 3px
+            @media screen and (max-width: 768px)
+                padding-top: 5px
         .menu-toggle
-            padding: 12px 20px 12px 20px
+            padding: 15px 20px 15px 20px
+            max-height: 55px
+            @media screen and (max-width: 768px)
+                padding: 9px 20px 9px 20px
             .icon-bar
                 display: block
                 width: 22px
@@ -221,7 +229,8 @@ a:hover, a:visited, a:link, a:active
                         margin-bottom: 10px
                         margin-top: 10px
                     p
-                        width: 50%
+                        width: 80%
+                        max-height: 102px
                 .cart-box
                     margin-top: 10px
                     ul
