@@ -846,6 +846,33 @@ a:hover:visited, a:visited:visited, a:link:visited, a:active:visited {
   width: 20px;
 }
 
-#navMenu ul li a, .wrapper section.main .content .cart-box ul li, .wrapper section.main .content .btn-def, .control, .control .quarter-circle, .control p, .control.prev .quarter-circle, .control.prev span {
+@media screen and (max-width: 400px) {
+  .myCredit {
+    display: none;
+  }
+}
+
+.myCredit {
+  font-size: 10px;
+  text-transform: none;
+  padding: 5px 10px;
+  background-color: #513A50;
+  color: #F7EDD9;
+  position: fixed;
+  right: 10px;
+  bottom: 80px;
+  z-index: 99999;
+  opacity: 0.3;
+}
+
+.myCredit:hover {
+  opacity: 1;
+}
+
+.myCredit a {
+  color: #FAB347;
+}
+
+#navMenu ul li a, .wrapper section.main .content .cart-box ul li, .wrapper section.main .content .btn-def, .control, .control .quarter-circle, .control p, .control.prev .quarter-circle, .control.prev span, .myCredit {
   transition: all 0.33s ease;
 }

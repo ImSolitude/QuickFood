@@ -335,5 +335,29 @@ a:hover, a:visited, a:link, a:active
 
         hr
             width: 20px
+
+
+@media screen and (max-width: 400px)
+    .myCredit
+        display: none
+
+.myCredit
+    font-size: 10px
+    text-transform: none
+    padding: 5px 10px
+    background-color: $purple
+    color: $lightColor
+    position: fixed
+    right: 10px
+    bottom: 80px
+    z-index: 99999
+    @extend %transition
+    opacity: 0.3
+    &:hover
+        opacity: 1
+    a
+        color: $yellow
+
+
 %transition
     transition: all 0.33s ease
