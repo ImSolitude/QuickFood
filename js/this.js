@@ -141,4 +141,12 @@ $(document).ready(function() {
         }
     }
 
+
+    $('.trigger-overlay').on('click', function() {
+        if( $('div.overlay').hasClass('open') ) {
+            $('div.overlay').removeClass('open')
+        } else {
+            $('div.overlay').addClass('open')
+        }
+    });
 });
